@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东轮播效果</title>
+	<style>
+		*{margin:0;padding: 0;}
+		ul{list-style: none;} /* 清除列表初始样式 */
+		.out{width: 730px;height: 454px;margin: 50px auto;position: relative;}
+		/* margin使用auto就能自动居中 */
+		.out .img li{position: absolute;top: 0;left: 0;display: none;}/* 父元素要相对定位，子元素绝对定位 */
+		.out .num{position: absolute;bottom: 20px;left:0;text-align: center;font-size: 0px;width: 100%;}
+		.out .num li{width: 20px;height: 20px;background: #666;color: #fff;text-align: center;line-height: 20px;border-radius:50%;display: inline-block;font-size: 16px;margin: 0 3px; cursor: pointer;}
+		/* margin: 0 20px;数字与数字之间的距离 */
+		.out .btn{position: absolute;top: 50%;margin-top:-30px;width: 30px;height: 60px;background: rgba(0,0,0,0.5);color: #fff;text-align: center;line-height: 60px;font-size: 40px;display: none;cursor: pointer;}
+		.out:hover .btn{display: block;}
+		.out .left{left: 0;}
+		.out .right{right: 0;}
+		.out .num li.active{background: #a00;}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<div class="out">
+		<ul class="img">
+			<li><a href="#"><img src="images/1.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/2.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/3.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/4.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/5.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/6.jpg" alt=""></a></li>
+		</ul>
+		
+		<ul class="num">
+			<!-- <li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li> -->
+		</ul>
+		<div class="left btn"><</div>
+		<div class="right btn">></div>
+	</div>
+</body>
+</html>
